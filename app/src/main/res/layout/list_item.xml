@@ -36,7 +36,7 @@
                 android:lines="1"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textStyle="bold"
-                tools:text="Anjuna Beach"/>
+                tools:text="@string/name"/>
 
             <TextView
                 android:id="@+id/type"
@@ -45,7 +45,7 @@
                 android:gravity="end"
                 android:lines="1"
                 android:textStyle="italic"
-                tools:text="Beach"
+                tools:text="@string/type"
                 />
         </LinearLayout>
 
@@ -57,7 +57,7 @@
             android:layout_weight="1"
             android:gravity="end"
             android:lines="1"
-            tools:text="Madgaon"/>
+            tools:text="@string/location"/>
 
     </LinearLayout>
 

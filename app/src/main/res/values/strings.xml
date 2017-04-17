@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TourGuide</string>
+    <string name="name">Anjuna Beach</string>
+    <string name="type">Beach</string>
+    <string name="location">Madgaon</string>
+
 </resources>
