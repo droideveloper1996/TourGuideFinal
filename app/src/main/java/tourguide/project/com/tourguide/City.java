@@ -29,9 +29,10 @@ class City {
     }
 
     private int mImageResouceId;
+    private int mIconResourceId;
     public static final int mIMAGE_ID_CONSTANT=-1;
 
-    public City(String mPlace, String mType,String mDescription, String mRestaurants, String mAttraction, String mEvent) {
+    public City(String mPlace, String mType,String mDescription, String mRestaurants, String mAttraction, String mEvent,int mIconResourceId) {
         this.mPlace = mPlace;
         this.mDescription = mDescription;
         this.mRestaurants = mRestaurants;
@@ -39,14 +40,26 @@ class City {
         this.mEvent = mEvent;
         this.mType=mType;
         mImageResouceId=mIMAGE_ID_CONSTANT;
+        this.mIconResourceId=mIconResourceId;
     }
-    public City(String mPlace,String mType, String mDescription, String mRestaurants, String mAttraction, String mEvent,int mImageResouceId) {
+
+    public int getmIconResourceId() {
+        return mIconResourceId;
+    }
+
+    public void setmIconResourceId(int mIconResourceId) {
+        this.mIconResourceId = mIconResourceId;
+    }
+
+    public City(String mPlace, String mType, String mDescription, String mRestaurants, String mAttraction, String mEvent, int mImageResouceId, int mIconResourceId) {
         this.mPlace = mPlace;
         this.mDescription = mDescription;
         this.mRestaurants = mRestaurants;
         this.mAttraction = mAttraction;
         this.mEvent = mEvent;
         this.mType=mType;
+
+        this.mIconResourceId=mIconResourceId;
         this.mImageResouceId=mImageResouceId;
     }
     public String getmPlace() {

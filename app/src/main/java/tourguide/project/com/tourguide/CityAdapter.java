@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -34,6 +35,8 @@ class CityAdapter extends ArrayAdapter<City>{
         TextView location=(TextView)listItemView.findViewById(R.id.location);
         TextView type=(TextView)listItemView.findViewById(R.id.type);
         TextView attaction=(TextView)listItemView.findViewById(R.id.attraction);
+        ImageView logoImage=(ImageView)listItemView.findViewById(R.id.logoImage);
+        logoImage.setImageResource(current_object.getmIconResourceId());
 
         location.setText(current_object.getmPlace());
         attaction.setText(current_object.getmAttraction());

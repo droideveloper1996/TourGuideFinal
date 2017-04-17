@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
          */
 
 
-        city.add(new City("Calangaute Beach", "Beach", "Magnificent Sunset", "Majorda", "Beach Side Restaurent", "Beach Party"));
-        city.add(new City("Vagator Beach", "Beach Sports", "Famous for Water Soprts", "Vagator", "Water Soprts", "Beach Sports"));
-        city.add(new City("Cameo Restaurant", "Beach Restaurants", "Famous for Water Soprts", "Vagator", "Famous for Sea Foods", "Beach Restaurants"));
-        city.add(new City("Anjuna Beach", "Beach", "Anjuna Beach", "Heaven for sea Food Lovers", "Famous for nightlife and parties. For Hippies", "Beach Party"));
-        city.add(new City("Britto's Restaurant", "Beach Restaurants", "Famous for Water Soprts", "Vagator", "Famous for Sea Foods", "Beach Restaurants",R.drawable.beahparty));
+        city.add(new City("Calangaute Beach", "Beach", "Magnificent Sunset", "Majorda", "Beach Side Restaurent", "Beach Party",R.drawable.beach));
+        city.add(new City("Vagator Beach", "Beach Sports", "Famous for Water Soprts", "Vagator", "Water Soprts", "Beach Sports",R.drawable.sports));
+        city.add(new City("Cameo Restaurant", "Beach Restaurants", "Famous for Water Soprts", "Vagator", "Famous for Sea Foods", "Beach Restaurants",R.drawable.food));
+        city.add(new City("Anjuna Beach", "Beach", "Anjuna Beach", "Heaven for sea Food Lovers", "Famous for nightlife and parties. For Hippies", "Beach Party",R.drawable.church));
+        city.add(new City("Britto's Restaurant", "Beach Restaurants", "Famous for Water Soprts", "Vagator", "Famous for Sea Foods", "Beach Restaurants",R.drawable.beahparty,R.drawable.event));
         CityAdapter cityAdapter = new CityAdapter(this, city);
         listView.setAdapter(cityAdapter);
         listView.setEmptyView(imageView);
