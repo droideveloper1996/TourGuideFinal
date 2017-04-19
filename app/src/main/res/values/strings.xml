@@ -3,5 +3,10 @@
     <string name="name">Anjuna Beach</string>
     <string name="type">Beach</string>
     <string name="location">Madgaon</string>
+    <string name="beach">Beaches</string>
+    <string name="church">Church</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="hotels">Hotels</string>
+    <string name="events">Events</string>
 
 </resources>

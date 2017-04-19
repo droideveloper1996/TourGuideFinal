@@ -16,14 +16,14 @@ public class DetailActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.detailTextView);
         Intent i = getIntent();
         int resource = i.getIntExtra("imageResourceId", -1);
-        String description=i.getStringExtra("description");
-        String restaurant=i.getStringExtra("restaurant");
-        String attraction =i.getStringExtra("attraction");
-        String event=i.getStringExtra("event");
-        String place=i.getStringExtra("place");
+        String description = i.getStringExtra("description");
+        String restaurant = i.getStringExtra("restaurant");
+        String attraction = i.getStringExtra("attraction");
+        String event = i.getStringExtra("event");
+        String place = i.getStringExtra("place");
         if (resource != -1) {
             imageView.setImageResource(resource);
         }
-        textView.setText(place+'\n'+attraction+'\n'+description+'\n'+restaurant+'\n'+event);
+        textView.setText(place + '\n' + attraction + '\n' + description + '\n' + restaurant + '\n' + event);
     }
 }

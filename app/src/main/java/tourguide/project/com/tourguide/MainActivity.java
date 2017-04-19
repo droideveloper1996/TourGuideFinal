@@ -3,7 +3,6 @@ package tourguide.project.com.tourguide;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -19,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView imageView=(ImageView)findViewById(R.id.emptyView);
+        ImageView imageView = (ImageView) findViewById(R.id.emptyView);
         ListView listView = (ListView) findViewById(R.id.listView);
         final ArrayList<City> city = new ArrayList<City>();
         /**
@@ -30,13 +29,12 @@ public class MainActivity extends AppCompatActivity {
          * String mAttraction,
          * String mEvent
          */
-
-
-        city.add(new City("Calangaute Beach", "Beach", "Magnificent Sunset", "Majorda", "Beach Side Restaurent", "Beach Party",R.drawable.beach));
-        city.add(new City("Vagator Beach", "Beach Sports", "Famous for Water Soprts", "Vagator", "Water Soprts", "Beach Sports",R.drawable.sports));
-        city.add(new City("Cameo Restaurant", "Beach Restaurants", "Famous for Water Soprts", "Vagator", "Famous for Sea Foods", "Beach Restaurants",R.drawable.food));
-        city.add(new City("Anjuna Beach", "Beach", "Anjuna Beach", "Heaven for sea Food Lovers", "Famous for nightlife and parties. For Hippies", "Beach Party",R.drawable.church));
-        city.add(new City("Britto's Restaurant", "Beach Restaurants", "Famous for Water Soprts", "Vagator", "Famous for Sea Foods", "Beach Restaurants",R.drawable.beahparty,R.drawable.event));
+        city.add(new City("Beaches", R.drawable.beach));
+        city.add(new City("Restaurants", R.drawable.food));
+        city.add(new City("Church", R.drawable.church));
+        city.add(new City("Events", R.drawable.event));
+        city.add(new City("Hotels", R.drawable.hotel));
+        city.add(new City("More Pics", R.drawable.pict));
         CityAdapter cityAdapter = new CityAdapter(this, city);
         listView.setAdapter(cityAdapter);
         listView.setEmptyView(imageView);
@@ -45,20 +43,31 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
                 City city1 = city.get(position);
-                String type = city1.getmType();
-                int res=city1.getmImageResouceId();
-                Log.i("Resource ID",Integer.toString(res));
-                Toast.makeText(getApplicationContext(), "Item CLicked on" + position + " with type " + type, Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(MainActivity.this, DetailActivity.class);
-                i.putExtra("imageResourceId", res);
-                i.putExtra("place", city1.getmPlace());
-                i.putExtra("description", city1.getmDescription());
-                i.putExtra("restaurant", city1.getmRestaurants());
-                i.putExtra("attraction", city1.getmAttraction());
-                i.putExtra("event", city1.getmEvent());
-               startActivity(i);
+                String place = city1.getmPlace();
+                Toast.makeText(getApplicationContext(), place, Toast.LENGTH_SHORT).show();
+
+                if (place.equals("Beaches")) {
+                    startActivity(new Intent(MainActivity.this, Beach.class));
+                } else if (place.equals("Restaurants")) {
+                    startActivity(new Intent(MainActivity.this, Restaurants.class));
+
+                } else if (place.equals("Church")) {
+                    startActivity(new Intent(MainActivity.this, Church.class));
+
+                } else if (place.equals("Hotels")) {
+                    startActivity(new Intent(MainActivity.this, Hotel.class));
+
+                } else if (place.equals("More Pics")) {
+                    startActivity(new Intent(MainActivity.this, Pictures.class));
+
+                } else {
+                    startActivity(new Intent(MainActivity.this, Events.class));
+
+                }
             }
         });
-        cityAdapter.setNotifyOnChange(true);
+
     }
 }
+
+

@@ -15,33 +15,28 @@ import java.util.ArrayList;
  * Created by Abhishek on 16/04/2017.
  */
 
-class CityAdapter extends ArrayAdapter<City>{
-    public CityAdapter( Context context,  ArrayList<City> city) {
+class CityAdapter extends ArrayAdapter<City> {
+    public CityAdapter(Context context, ArrayList<City> city) {
         super(context, 0, city);
     }
 
     @NonNull
     @Override
-    public View getView(int position,  View convertView,  ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
 
-        View listItemView=convertView;
-        if(listItemView==null)
-        {
-            listItemView=LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent,false);
+        View listItemView = convertView;
+        if (listItemView == null) {
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
-
-        City current_object=getItem(position);
-
-        TextView location=(TextView)listItemView.findViewById(R.id.location);
-        TextView type=(TextView)listItemView.findViewById(R.id.type);
-        TextView attaction=(TextView)listItemView.findViewById(R.id.attraction);
-        ImageView logoImage=(ImageView)listItemView.findViewById(R.id.logoImage);
+        City current_object = getItem(position);
+        TextView location = (TextView) listItemView.findViewById(R.id.location);
+        TextView type = (TextView) listItemView.findViewById(R.id.type);
+        TextView attaction = (TextView) listItemView.findViewById(R.id.attraction);
+        ImageView logoImage = (ImageView) listItemView.findViewById(R.id.logoImage);
         logoImage.setImageResource(current_object.getmIconResourceId());
-
         location.setText(current_object.getmPlace());
         attaction.setText(current_object.getmAttraction());
         type.setText(current_object.getmType());
-
         return listItemView;
     }
 }

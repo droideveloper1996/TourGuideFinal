@@ -25,7 +25,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:orientation="vertical">
 
             <TextView
@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="end"
                 android:lines="1"
+                android:textSize="24sp"
                 android:textStyle="italic"
                 tools:text="@string/type"
                 />
@@ -54,9 +55,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="end"
+            android:layout_weight="2"
+            android:gravity="center"
             android:lines="1"
+            android:textSize="18sp"
             tools:text="@string/location"/>
 
     </LinearLayout>
