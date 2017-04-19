@@ -20,17 +20,12 @@ public class Beach extends AppCompatActivity {
         setContentView(R.layout.activity_beach);
         ListView beachListView = (ListView) findViewById(R.id.beachListView);
         final ArrayList<City> beaches = new ArrayList<>();
-        beaches.add(new City("Vagator Beach", "Beach Sports", "Famous for Water Soprts", "Vagator", "Water Soprts", "Beach Sports", R.drawable.sports));
-        beaches.add(new City("Bagha Beach", "Beach", "Famous for Social Life", "Vagator", "Most Calm Beach", "Beach Sports", R.drawable.beach));
-        beaches.add(new City("Colva Beach", "Beach", "Most Calm Beach", "Vagator", "Water Soprts", "Beach Sports", R.drawable.beach));
-        beaches.add(new City("Anjuna Beach", "Beach", "Famous for Water Soprts", "Vagator", "NightLife", "Beach Sports", R.drawable.beach));
-        beaches.add(new City("Pallolem Beach", "Beach", "Famous for Water Soprts", "Vagator", "Paradise for Couple", "Beach Sports", R.drawable.sports));
+        beaches.add(new City("Pallolem Beach", "Beach", "Famous for Water Soprts", "Vagator", "Paradise for Couple", "Beach Sports", R.drawable.beach5));
         CityAdapter beachAdap = new CityAdapter(this, beaches);
         beachListView.setAdapter(beachAdap);
         beachListView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-
                 City city1 = beaches.get(position);
                 String type = city1.getmType();
                 int res = city1.getmImageResouceId();

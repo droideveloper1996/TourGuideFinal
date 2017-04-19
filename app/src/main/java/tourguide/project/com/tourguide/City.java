@@ -43,16 +43,6 @@ class City {
         this.mIconResourceId = mIconResourceId;
     }
 
-    public City(int mImageResouceId) {
-        this.mPlace = "";
-        this.mDescription = "";
-        this.mRestaurants = "";
-        this.mAttraction = "";
-        this.mEvent = "";
-        this.mType = "";
-        this.mImageResouceId = mImageResouceId;
-
-    }
 
     public int getmIconResourceId() {
         return mIconResourceId;

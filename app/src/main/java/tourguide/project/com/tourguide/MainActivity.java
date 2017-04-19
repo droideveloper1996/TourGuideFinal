@@ -21,14 +21,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.emptyView);
         ListView listView = (ListView) findViewById(R.id.listView);
         final ArrayList<City> city = new ArrayList<City>();
-        /**
-         * String mPlace = location of place,
-         * String mType,
-         * String mDescription,
-         * String mRestaurants,
-         * String mAttraction,
-         * String mEvent
-         */
+
         city.add(new City("Beaches", R.drawable.beach));
         city.add(new City("Restaurants", R.drawable.food));
         city.add(new City("Church", R.drawable.church));
@@ -62,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
                     startActivity(new Intent(MainActivity.this, Events.class));
-
                 }
             }
         });

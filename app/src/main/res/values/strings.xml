@@ -8,5 +8,9 @@
     <string name="restaurants">Restaurants</string>
     <string name="hotels">Hotels</string>
     <string name="events">Events</string>
+    <string name="hotel">Hotels</string>
+    <string name="pictures">More Pics</string>
+    <string name="pallolem">Pallolem Beach</string>
+    <string name="imageResourceId">imageResourceId</string>
 
 </resources>

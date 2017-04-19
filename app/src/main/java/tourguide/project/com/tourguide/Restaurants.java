@@ -18,11 +18,11 @@ public class Restaurants extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
-        ListView listView=(ListView)findViewById(R.id.restlistView);
-        final ArrayList<City> restArrayList=new ArrayList<>();
+        ListView listView = (ListView) findViewById(R.id.restlistView);
+        final ArrayList<City> restArrayList = new ArrayList<>();
         restArrayList.add(new City("Britto's Restaurant", "Beach Restaurants", "Famous for Water Soprts", "Vagator", "Famous for Sea Foods", "Beach Restaurants", R.drawable.beahparty, R.drawable.event));
         restArrayList.add(new City("Cameo Restaurant", "Beach Restaurants", "Famous for Water Soprts", "Vagator", "Famous for Sea Foods", "Beach Restaurants", R.drawable.food));
-        CityAdapter restAdapter=new CityAdapter(this,restArrayList);
+        CityAdapter restAdapter = new CityAdapter(this, restArrayList);
         listView.setAdapter(restAdapter);
         listView.setOnItemClickListener(new OnItemClickListener() {
             @Override
