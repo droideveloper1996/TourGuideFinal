@@ -17,7 +17,6 @@ public class Pictures extends AppCompatActivity {
         CityAdapter pictures = new CityAdapter(this, picture1);
         picture1.add(new City("", "", "", "", "", "", R.drawable.beahparty));
         picture1.add(new City("", "", "", "", "", "", R.drawable.beahparty));
-        picture1.add(new City("", "", "", "", "", "", R.drawable.beahparty));
         pictureListView.setAdapter(pictures);
     }
 }

@@ -12,5 +12,29 @@
     <string name="pictures">More Pics</string>
     <string name="pallolem">Pallolem Beach</string>
     <string name="imageResourceId">imageResourceId</string>
-
+    <string name="beachFamous">Famous for Water Soprts</string>
+    <string name="vagator">Famous for Water Soprts</string>
+    <string name="beachsport">Water Sports</string>
+    <string name="paradise">Paradise for Couple</string>
+    <string name="place">place</string>
+    <string name="description">description</string>
+    <string name="restaurant">restaurant</string>
+    <string name="attraction">attraction</string>
+    <string name="event">event</string>
+    <string name="church_name">Three kings Chappel Church</string>
+    <string name="church_name1">Ou Lady of Rosary Church</string>
+    <string name="restname">Britto\'s Restaurant</string>
+    <string name="rest">Beach Restaurants</string>
+    <string name="famousrest">Famous for Water Sports</string>
+    <string name="beachRest">Beach Restaurants</string>
+    <string name="beachPlace">Vagator</string>
+    <string name="special">Beach Restaurants</string>
+    <string name="party">New Year Party</string>
+    <string name="palm">Acacia Palm</string>
+    <string name="club">Club</string>
+    <string name="maria">Maria Resort</string>
+    <string name="hotelPalm">Hotel Palm</string>
+    <string name="budget">Budget Hotel</string>
+    <string name="pool">Pool</string>
+    <string name="star">3 star</string>
 </resources>

@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listView);
         final ArrayList<City> city = new ArrayList<City>();
 
-        city.add(new City("Beaches", R.drawable.beach));
-        city.add(new City("Restaurants", R.drawable.food));
-        city.add(new City("Church", R.drawable.church));
-        city.add(new City("Events", R.drawable.event));
-        city.add(new City("Hotels", R.drawable.hotel));
-        city.add(new City("More Pics", R.drawable.pict));
+        city.add(new City(getResources().getString(R.string.beach), R.drawable.beach));
+        city.add(new City(getResources().getString(R.string.restaurants), R.drawable.food));
+        city.add(new City(getResources().getString(R.string.church), R.drawable.church));
+        city.add(new City(getResources().getString(R.string.events), R.drawable.event));
+        city.add(new City(getResources().getString(R.string.hotel), R.drawable.hotel));
+        city.add(new City(getResources().getString(R.string.pictures), R.drawable.pict));
         CityAdapter cityAdapter = new CityAdapter(this, city);
         listView.setAdapter(cityAdapter);
         listView.setEmptyView(imageView);
@@ -39,18 +39,18 @@ public class MainActivity extends AppCompatActivity {
                 String place = city1.getmPlace();
                 Toast.makeText(getApplicationContext(), place, Toast.LENGTH_SHORT).show();
 
-                if (place.equals("Beaches")) {
+                if (place.equals(getResources().getString(R.string.beach))) {
                     startActivity(new Intent(MainActivity.this, Beach.class));
-                } else if (place.equals("Restaurants")) {
+                } else if (place.equals(getResources().getString(R.string.restaurants))) {
                     startActivity(new Intent(MainActivity.this, Restaurants.class));
 
-                } else if (place.equals("Church")) {
+                } else if (place.equals(getResources().getString(R.string.church))) {
                     startActivity(new Intent(MainActivity.this, Church.class));
 
-                } else if (place.equals("Hotels")) {
+                } else if (place.equals((getResources().getString(R.string.hotel)))) {
                     startActivity(new Intent(MainActivity.this, Hotel.class));
 
-                } else if (place.equals("More Pics")) {
+                } else if (place.equals(getResources().getString(R.string.pictures))) {
                     startActivity(new Intent(MainActivity.this, Pictures.class));
 
                 } else {

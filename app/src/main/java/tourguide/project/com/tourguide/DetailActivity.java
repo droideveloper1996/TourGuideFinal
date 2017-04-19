@@ -15,12 +15,12 @@ public class DetailActivity extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.detailImageView);
         TextView textView = (TextView) findViewById(R.id.detailTextView);
         Intent i = getIntent();
-        int resource = i.getIntExtra("imageResourceId", -1);
-        String description = i.getStringExtra("description");
-        String restaurant = i.getStringExtra("restaurant");
-        String attraction = i.getStringExtra("attraction");
-        String event = i.getStringExtra("event");
-        String place = i.getStringExtra("place");
+        int resource = i.getIntExtra(getResources().getString(R.string.imageResourceId), -1);
+        String description = i.getStringExtra(getResources().getString(R.string.description));
+        String restaurant = i.getStringExtra(getResources().getString(R.string.restaurant));
+        String attraction = i.getStringExtra(getResources().getString(R.string.attraction));
+        String event = i.getStringExtra(getResources().getString(R.string.event));
+        String place = i.getStringExtra(getString(R.string.place));
         if (resource != -1) {
             imageView.setImageResource(resource);
         }
